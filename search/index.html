@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Amazon Transcribe WebSocket API - Sample Application</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    <link rel="stylesheet" href="https://cdn.shoelace.style/1.0.0-beta24/shoelace.css">
+    <link rel="stylesheet" href="styles.css">
+        <!-- api gateway generated sdk -->
+    <script src="./assets/js/sdk/lib/axios/dist/axios.standalone.js"></script>
+    <script src="./assets/js/sdk/lib/CryptoJS/rollups/hmac-sha256.js"></script>
+    <script src="./assets/js/sdk/lib/CryptoJS/rollups/sha256.js"></script>
+    <script src="./assets/js/sdk/lib/CryptoJS/components/hmac.js"></script>
+    <script src="./assets/js/sdk/lib/CryptoJS/components/enc-base64.js"></script>
+    <script src="./assets/js/sdk/lib/url-template/url-template.js"></script>
+    <script src="./assets/js/sdk/lib/apiGatewayCore/sigV4Client.js"></script>
+    <script src="./assets/js/sdk/lib/apiGatewayCore/apiGatewayClient.js"></script>
+    <script src="./assets/js/sdk/lib/apiGatewayCore/simpleHttpClient.js"></script>
+    <script src="./assets/js/sdk/lib/apiGatewayCore/utils.js"></script>
+
+    <script src="./assets/js/sdk/apigClient.js"></script>
+
+    <script src="./assets/js/aws-sdk.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        
+
+        <div id="error" class="isa_error"></div>
+
+        
+        <textarea id="transcript"  rows="5"
+            ></textarea>
+        <div class="row">
+            <div class="col">
+                <button id="start-button" class="button-xl" title="Start Transcription">
+                    <i class="fa fa-microphone"></i> Start
+                </button>
+                <button id="stop-button" class="button-xl" title="Stop Transcription" disabled="true"><i
+                        class="fa fa-stop-circle"></i> Stop
+                </button>
+                <button id="search-button" class="button-xl" >search
+            </button>
+                
+            </div>
+            
+        </div>
+    </div>
+
+   
+    <script>
+
+        var sdk = apigClientFactory.newClient({});
+  
+      </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="dist/main.js"></script>
+    <script src="./assets/js/chat.js"></script>
+</body>
+
+</html>
