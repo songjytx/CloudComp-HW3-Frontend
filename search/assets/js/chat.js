@@ -24,17 +24,9 @@ $(document).ready(function() {
       .then((response) => {
         console.log(response);
         var data = response.data;
-
-        if (data.messages && data.messages.length > 0) {
-          console.log('received ' + data.messages.length + ' messages');
-
-          var messages = data.messages;
-
-          for (var message of messages) {
-            if (message.type === 'unstructured') {
-              console.log(message);
-            } 
-          }
+        $('#images').html('');
+        for (let i = 0; i < data.length; i++) {
+          $('#images').prepend('<img src="' + 'https://photo-for-hw3.s3.amazonaws.com/' + data[i]['objectKey'] + '" />')
         }
       })
   }
